@@ -59,7 +59,6 @@ function getFrameRate(input){
 
 //Calculates timecode string representation given the framerate and framenumber. Returns -1 if error
 function toTimeCode (frameRate, frameNumber){
-	var is = Number.isInteger(frameNumber);
 	if (Number.isInteger(frameNumber) && frameNumber >= 0){
 		var frames = Math.round(frameNumber % frameRate);
 		var seconds = Math.floor((frameNumber / frameRate) % 60);
